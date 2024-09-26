@@ -87,4 +87,51 @@ console.log(...array1); // ... is a aspread operator it just spreads the value o
 console.log([...array2]); // If we want to spread the value in form of another array
 console.log([...array1, ...array2]); //It will spread the elements of both the arrays and will merge it
 console.log([100, ...array1, ...array2, 23]) //It will add 100 as first element and 23 as the last element
+
+function getInfo(a, b, ...c){//Now what it will do is it will pass the 1 to a and 2 to b but will make an array of all the remaining arguments and will pass it to c and this is what we call "Rest Operator". But one thing to keep in mind is that it can be used only as the end arguments and not the first or second.
+    console.log(a, b ,c);
+    return "Vihan Anand";
+}
+console.log(getInfo(1, 2, 3, 7, 9, 10, 12, 25, 58, 89));
 //--------------------------------------------------------------------------------------------
+//map, filter, find, some, every, includes, indexOf, findIndex
+
+const personData = [
+    {
+        name: "Vihan Anand",
+        age: 20,
+        RegID: 12356891
+    },
+    {
+        name: "Nancy Kumari",
+        age: 21,
+        RegID: 12358974
+    },
+    {
+        name: "Harshit Singh",
+        age: 20,
+        RegID: 12586341
+    },
+];
+
+//map function is used to extract js object in a specific format
+let getAllNames = personData.map((singlePerson, index) => {
+    console.log(singlePerson, index);
+    return `The name of the person is ${singlePerson.name} and has aged ${singlePerson.age} years`;
+})
+
+//find return only one result after checking the condition
+console.log([...getAllNames]);
+
+let getPersonAge = personData.find((singlePerson, index) => {
+    return singlePerson.age === 20;
+})
+
+//filter returns all the result which matches the condition
+console.log(getPersonAge);
+
+let getAllPersonAge = personData.filter((singlePerson, index) => {
+    return singlePerson.age === 20;
+})
+
+console.log(getAllPersonAge);
