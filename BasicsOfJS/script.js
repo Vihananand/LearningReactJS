@@ -135,3 +135,30 @@ let getAllPersonAge = personData.filter((singlePerson, index) => {
 })
 
 console.log(getAllPersonAge);
+
+//It checks if any data matches with the condition if any data of array matches with the condition then it returns true
+let checkAge = personData.some((singlePerson) =>{
+    return singlePerson.age > 21;
+})
+
+console.log(checkAge);
+
+//It will go through all the elements of the array and return true only if all the elements satisfy the condition
+let checkEveryAge = personData.every((singlePerson) =>{
+    return singlePerson.age > 19;
+})
+
+console.log(checkEveryAge);
+
+const fruitsArray = ["apple", "banana", "orange"];
+//Includes checks wether the element is present in the array or not
+console.log(fruitsArray.includes("apple"));
+//indexOf return the index of the element and if the element is not present in the list it returns -1
+console.log(fruitsArray.indexOf("banana"));
+
+let getIndexOfPerson = personData.findIndex((singlePerson) =>{
+    return singlePerson.age === 21;
+})
+console.log(getIndexOfPerson);
+
+
