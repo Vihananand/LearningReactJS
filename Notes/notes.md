@@ -59,7 +59,7 @@ function ProductList(){
 
 ---
 
-### **3.1. When is it okay to use indexes as keys?**
+### **When is it okay to use indexes as keys?**
 
 - ### When the list is static and will never change (i.e., no new items will be added, removed, or reordered).
 
