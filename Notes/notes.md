@@ -66,4 +66,33 @@ function ProductList(){
 - ### When the list is short and performance is not a concern.
 
 ---
+### 4. **Props** : Props are used to pass data from one component to another component. 
 
+```jsx
+const dummyProductData = ["Product1", "Product2", "Product3"];
+
+function App() {
+
+  return (
+    <div>
+      <h1>Live Project Using ReactJS</h1>
+      {/* <ClassBasedComponents/>
+      <FunctionalComponent/> */}
+      <ProductList dummyProductData={dummyProductData} name="Vihan Anand" city="Gorakhpur"/>
+    </div>
+  )
+}
+```
+### Here in "dummyProductData={dummyProductData}" the variable before = is the key name which will be used to access the data in the other component and the variable inside {} is the actual name which is present in the component as in "const dummyProductData = ["Product1", "Product2", "Product3"]". Props named "name" and "city" is also passed to product-list.jsx.
+---
+
+### 5. Styling in ReactJS: 
+
+### Styling in react can be done in 2 ways:
+
+  - ### Using normal ".css" files
+  - ### Using CSS frameworks
+
+### <u>*Using ".css" files*</u>
+
+### We can create ".css" files and import it inside the components to use it. We can give an HTML tag a class using ***className*** attribute. ***className*** attribute is used because ***class*** word is already used by the compiler so to prevent the conflict we use different name.

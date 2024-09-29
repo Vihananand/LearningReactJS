@@ -5,6 +5,8 @@ import ProductList from './assets/components/products/product-list'
 
 //App -> ProductList -> ProductItem -> ButtonComponent
 
+const dummyProductData = ["Product1", "Product2", "Product3"];
+
 function App() {
 
   return (
@@ -12,7 +14,7 @@ function App() {
       <h1>Live Project Using ReactJS</h1>
       {/* <ClassBasedComponents/>
       <FunctionalComponent/> */}
-      <ProductList name="Vihan Anand" city="Gorakhpur"/> {/* This function is taken from Product list jsx and "name" and "city" props are passed to the product-list.jsx which can be used in that component now */}
+      <ProductList dummyProductData={dummyProductData} name="Vihan Anand" city="Gorakhpur"/> {/* This function is taken from Product list jsx and "name" and "city" props are passed to the product-list.jsx which can be used in that component now */}
     </div>
   )
 }
