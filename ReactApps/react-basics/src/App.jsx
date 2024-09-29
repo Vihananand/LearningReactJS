@@ -12,7 +12,7 @@ function App() {
       <h1>Live Project Using ReactJS</h1>
       {/* <ClassBasedComponents/>
       <FunctionalComponent/> */}
-      <ProductList/> {/* This function is taken from Product list jsx */}
+      <ProductList name="Vihan Anand" city="Gorakhpur"/> {/* This function is taken from Product list jsx and "name" and "city" props are passed to the product-list.jsx which can be used in that component now */}
     </div>
   )
 }
