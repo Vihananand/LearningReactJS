@@ -95,4 +95,4 @@ function App() {
 
 ### <u>*Using ".css" files*</u>
 
-### We can create ".css" files and import it inside the components to use it. We can give an HTML tag a class using ***className*** attribute. ***className*** attribute is used because ***class*** word is already used by the compiler so to prevent the conflict we use different name.
+### We can create ".css" files and import it inside the components to use it. We can give an HTML tag a class using ***className*** attribute. ***className*** attribute is used because ***class*** word is already used by the JS compiler for the class-based components so to prevent the conflict we use different name.
