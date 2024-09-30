@@ -6,9 +6,9 @@ function ProductList({ name, city, dummyProductData }) { {/* here I have destruc
 
     return (
         <div>
-            <h2 className="title">E-Commerce Website</h2>
-            <h4>My name is {name} and I live in the city of {city}</h4>
-            <ProductItem/> {/* This jsx is taken from product item jsx */}
+            {/* <h2 className="title">E-Commerce Website</h2> */}
+            <h4 className='text-white text-xl'>My name is {name} and I live in the city of {city}</h4>
+            {/* <ProductItem/> This jsx is taken from product item jsx */}
             <ul>
                 {
                     dummyProductData.map((item, index) => (
