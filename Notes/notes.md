@@ -91,8 +91,25 @@ function App() {
 ### Styling in react can be done in 2 ways:
 
   - ### Using normal ".css" files
+  - ### Using normal ".module.css" files
+  - ### Using inline css
   - ### Using CSS frameworks
 
 ### <u>*Using ".css" files*</u>
 
 ### We can create ".css" files and import it inside the components to use it. We can give an HTML tag a class using ***className*** attribute. ***className*** attribute is used because ***class*** word is already used by the JS compiler for the class-based components so to prevent the conflict we use different name.
+
+### <u>*Using ".module.css" files*</u>
+
+### We can create ".module.css" files. These are not basically css files but css modules in which we can give multiple css styling for different components and then import it in jsx file and use for different components.
+
+### <u>*Using inline css*</u>
+
+```jsx
+<p style={{padding: "20px", border: "2px solid red"}} className={styles.productTitle}>{singleProductItem}</p>
+```
+### The CSS properties given in style are all applied on the p tag
+
+### <u>*Using css frameworks*</u>
+
+### We can use CSS frameworks like [TailwindCSS](https://tailwindcss.com/docs/guides/vite) and [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/vite/)
