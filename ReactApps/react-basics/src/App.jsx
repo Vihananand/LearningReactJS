@@ -1,11 +1,11 @@
 import './App.css'
-import ProductList from './assets/components/products/product-list'
+// import ProductList from './assets/components/products/product-list'
 import ClassBasedComponents from './assets/components/class-based-components'
 // import FunctionalComponent from './assets/components/functional-component'
 
 //App -> ProductList -> ProductItem -> ButtonComponent
 
-const dummyProductData = ["Product1", "Product2", "Product3"];
+// const dummyProductData = ["Product1", "Product2", "Product3"];
 
 function renderTextBlock(getFlag){
     return getFlag ? (<h1 className='text-5xl font-bold mt-10 text-white'>Live Project Using ReactJS</h1>) : 
