@@ -64,7 +64,7 @@ function ProductList(){
 - ### When the list is static and will never change (i.e., no new items will be added, removed, or reordered).
 
 - ### When the list is short and performance is not a concern.
-
+---
 ### **3.1 Interview Question:** Why Functional Components are Preferred Over Class-Based Components
 
 ### Class-based components in React were the primary way of creating components before functional components became more powerful with the introduction of **React Hooks** in React 16.8. Since then, functional components have become more preferred due to several advantages. Here’s why functional components are often preferred over class-based components:
