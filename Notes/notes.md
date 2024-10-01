@@ -57,7 +57,6 @@ function ProductList(){
 
   ### Example: If you have a list of input fields with indexes as keys, reordering or adding a new input could reset the content of all the inputs because the keys (indexes) would no longer match.
 
----
 
 ### **When is it okay to use indexes as keys?**
 
