@@ -2,9 +2,9 @@
 
 ### 1. In React there are ***two*** types of components
 
-- #### *Class based components*
+- ### *Class based components*
 
-- #### *Function based components*
+- ### *Function based components*
 
 ---
 
