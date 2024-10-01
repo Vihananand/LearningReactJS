@@ -31,7 +31,7 @@ function ProductList(){
 
 ---
 
-### 3. **Interview Question:** Why should not we keep indexes as the keys for li tag??
+### **3. Interview Question:** Why should not we keep indexes as the keys for li tag??
 
 ### Ans: Using indexes as keys in React's list rendering is generally discouraged because it can lead to performance issues and bugs, especially when the list is dynamic (items are added, removed, or reordered). Here’s why
 
@@ -64,6 +64,41 @@ function ProductList(){
 - ### When the list is static and will never change (i.e., no new items will be added, removed, or reordered).
 
 - ### When the list is short and performance is not a concern.
+
+### **3.1 Interview Question:** Why Functional Components are Preferred Over Class-Based Components
+
+### Class-based components in React were the primary way of creating components before functional components became more powerful with the introduction of **React Hooks** in React 16.8. Since then, functional components have become more preferred due to several advantages. Here’s why functional components are often preferred over class-based components:
+
+### 1. **Simplicity and Readability**
+- ### **Functional components** are much simpler and easier to read. They are essentially JavaScript functions, which makes them easier to understand and use.
+- ### **Class-based components** can be more complex because they require the use of lifecycle methods (like `componentDidMount`, `componentDidUpdate`, etc.), `this` keyword, and binding event handlers.
+
+### 2. **Hooks for Managing State and Side Effects**
+- ### With **React Hooks** (like `useState`, `useEffect`, etc.), functional components can now handle state, side effects, and more. This makes functional components just as powerful as class components but in a more concise way.
+- ### **Class-based components** require lifecycle methods to manage state and side effects, which can make the code more verbose and harder to follow.
+
+### 3. **Performance**
+- ### **Functional components** are typically lighter and more efficient because they don’t involve the overhead of managing `this` and lifecycle methods.
+- ### **Class-based components** are slightly heavier because of the need to manage the class instance and the `this` context.
+
+### 4. **No `this` Keyword**
+- ### In **functional components**, you don’t need to deal with the confusing `this` keyword. This avoids common bugs related to the binding of event handlers in class components.
+- ### **Class-based components** require developers to frequently bind `this` or use arrow functions to avoid losing context, which can be confusing for beginners.
+
+### 5. **Cleaner Code with Custom Hooks**
+- ### **Functional components** allow for more modular and reusable logic with **custom hooks**. This makes it easier to extract logic into reusable functions that can be shared across components.
+- ### **Class-based components** don’t have a built-in equivalent to hooks, making code reuse more difficult.
+
+### 6. **Future-Proofing**
+- ### **Functional components** are the recommended way of writing React components in modern React development. They are more aligned with the direction React is headed in, especially with the continued improvements and additions to React Hooks.
+- ### **Class-based components** are still supported but are less emphasized in modern React documentation and best practices.
+
+### 7. **Less Boilerplate Code**
+- ### **Functional components** require less code to set up compared to class components. There's no need to write a constructor or lifecycle methods, reducing the amount of boilerplate code.
+- ### **Class-based components** typically need constructors and other boilerplate, making them more verbose.
+
+### Conclusion
+### Functional components are generally preferred because they provide a more concise, readable, and efficient way to create components, especially with the power of React Hooks. They simplify code maintenance and are more aligned with modern React development practices, making class-based components less favorable in most cases.
 
 ---
 ### 4. **Props** : Props are used to pass data from one component to another component. 
@@ -113,3 +148,57 @@ function App() {
 ### <u>*Using css frameworks*</u>
 
 ### We can use CSS frameworks like [TailwindCSS](https://tailwindcss.com/docs/guides/vite) and [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/vite/)
+---
+### **6. Rendering a block on particular condition(Using ternary Operator[?:])**
+
+```jsx
+function renderTextBlock(getFlag){
+    return getFlag ? (<h1 className='text-5xl font-bold mt-10 text-white'>Live Project Using ReactJS</h1>) : 
+    (<h1 className='text-5xl font-bold mt-10 text-white'>Live Project Using CSS</h1>)
+}
+```
+
+### If getFlag == true then "Live Project Using ReactJS" will be rendered otherwise "Liver Project Using CSS" is rendered. Here we have created a seperate function for rendering but we can directly recieve it inside a variable and use it directly like,
+
+```jsx  
+const renderTextBlock = getFlag ? (<h1 className='text-5xl font-bold mt-10 text-white'>Live Project Using ReactJS</h1>) : (<h1 className='text-5xl font-bold mt-10 text-white'>Live Project Using CSS</h1>)
+}
+```
+---
+### **7. State Management**
+
+### Class based components have a way to manage state by which we can toggle the state of any component
+
+```jsx
+
+import { Component } from "react";
+
+class ClassBasedComponents extends Component {
+
+    state = {
+        showText: false,
+    };
+
+    handleClick = ()=>{
+        this.setState({
+            showText: !this.state.showText,
+        }) {/*"this" is used to give a instance to a particular object*/}
+    }
+
+    render(){
+        return(
+            <div className='flex flex-col justify-center items-center'>
+                {
+                    this.state.showText ? (<h3 className='text-white text-3xl font-bold'>Class Based Component</h3>) : null
+                }
+                <button onClick={this.handleClick} className='border-2 mb-10 mt-8 rounded-2xl text-white p-3'>Click Me!</button>
+            </div>
+        );
+    }
+}
+
+export default ClassBasedComponents;
+```
+
+### "state" is used store the current state of the component. "handleClick" is used to handle the event that is click of the mouse on which the state of component will toggle like here it is changing from "false" to "true". "handleClick" is created with arrow function because if we would have created normal JS function without arrow function we would have to bind it to the class using constructor
+---
